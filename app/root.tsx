@@ -11,6 +11,9 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import { Provider } from "react-redux";
 import { store } from "@/store";
+import Header from "@components/header";
+import Footer from "@components/footer";
+import Wrapper from "@components/wrapper";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -36,9 +39,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <Provider store={store}>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+          <Header/>
+
+          <Wrapper>
+            {children}
+          </Wrapper>
+
+          <Footer/>
+
+          <ScrollRestoration />
+          <Scripts />
         </Provider>
       </body>
     </html>
@@ -66,11 +76,11 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
+    <main>
       <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
+        <pre>
           <code>{stack}</code>
         </pre>
       )}

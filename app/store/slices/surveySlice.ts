@@ -1,17 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import type { SurveyState, DraftMeasurements, ShipResources, ShipData, CalculationResults } from '../../types';
-
-const initialState: SurveyState = {
-  currentShip: null,
-  initialMeasurements: { forward: 0, aft: 0, midPort: 0, midStarboard: 0 },
-  finalMeasurements: { forward: 0, aft: 0, midPort: 0, midStarboard: 0 },
-  initialResources: { fuel: 0, diesel: 0, freshWater: 0, ballast: 0, other: 0 },
-  finalResources: { fuel: 0, diesel: 0, freshWater: 0, ballast: 0, other: 0 },
-  waterDensity: 1.025,
-  results: null,
-  isLoading: false,
-  error: null,
-};
+import type { SurveyState, DraftMeasurements, ShipResources, ShipData, CalculationResults } from '@/types';
+import { initialState } from '@/const';
 
 const surveySlice = createSlice({
   name: 'survey',

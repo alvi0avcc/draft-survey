@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./app/*"],
+      "@components/*": ["./app/components/*"],
+      "@ui/*": ["./app/components/ui/*"],
+      "@const/*": ["./app/const/*"],
       "@routes/*": [".react-router/types/app/routes/*"]
     },
     "esModuleInterop": true,

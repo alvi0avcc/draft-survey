@@ -1,6 +1,10 @@
 import React from 'react';
-import { useAppSelector } from '../../store';
+import { useSelector } from 'react-redux';
 import DraftInput from '../../components/draftInput';
+import type { WritableDraft } from '@reduxjs/toolkit';
+import type { SurveyState } from '@/types';
+import { useAppSelector } from '@/store';
+// import { useAppSelector } from '@/store';
 // import DensityInput from '../components/DensityInput';
 // import ResourcesInput from '../components/ResourcesInput';
 // import ResultsDisplay from '../components/ResultsDisplay';
@@ -8,16 +12,22 @@ import DraftInput from '../../components/draftInput';
 // import { useCalculation } from '../hooks/useCalculation';
 
 const SurveyPage: React.FC = () => {
-  const { currentShip, isLoading, error } = useAppSelector((state) => state.survey);
+  const {currentShip, initialMeasurements, finalMeasurements,initialResources, finalResources, waterDensity, results, isLoading, error } = useAppSelector((state) => state.survey);
+  // const { currentShip, isLoading, error } = useAppSelector((state) => state.survey);
   // const { performCalculation } = useCalculation();
 
   return (
-    <div className="container mx-auto p-4 space-y-6">
-      <h1 className="text-3xl font-bold text-gray-800">Расчет драфт-сюрвея</h1>
+    <main className="">
+      <h1 className="">Расчет драфт-сюрвея</h1>
       
       {/* <ShipDataLoader /> */}
+
+      <section>
+        <h2>Initial</h2>
+        
+      </section>
       
-      {currentShip && (
+      {!currentShip && (
         <>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="space-y-6">
@@ -54,7 +64,7 @@ const SurveyPage: React.FC = () => {
           {/* <ResultsDisplay /> */}
         </>
       )}
-    </div>
+    </main>
   );
 };
 

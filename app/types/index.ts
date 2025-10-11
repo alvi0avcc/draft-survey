@@ -1,8 +1,15 @@
+export type SameForBothSides = 'different' | 'byPortSide' | 'byStarBoardSide';
+
+export interface DraftsMeasurementsPoint {
+  portSide: number | null;
+  starBoardSide: number | null;
+  sameForBothSides: SameForBothSides;
+}
+
 export interface DraftMeasurements {
-  forward: number;
-  aft: number;
-  midPort: number;
-  midStarboard: number;
+  forward: DraftsMeasurementsPoint;
+  mid: DraftsMeasurementsPoint;
+  aft: DraftsMeasurementsPoint;
 }
 
 export interface WaterProperties {
@@ -35,7 +42,7 @@ export interface ShipData {
 }
 
 export interface SurveyState {
-  currentShip: ShipData | null;
+  currentShip: ShipData | null
   initialMeasurements: DraftMeasurements;
   finalMeasurements: DraftMeasurements;
   initialResources: ShipResources;
