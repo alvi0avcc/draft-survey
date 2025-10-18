@@ -8,7 +8,7 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import "./app.css";
+import "./global.css";
 import { Provider } from "react-redux";
 import { store } from "@/store";
 import Header from "@components/header";

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100%;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.blockLineHoriz{
+  display: flex;
+}
+
+.blockLineVert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blockWrap {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,21 @@
+.draftSurveyContainer{
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.draftMainDimensions{
+  border: 1px solid blue;
+  width: 100%;
+}
+
+.draftSurveyInitial,
+.draftSurveyFinal {
+  border: 1px solid blue;
+  flex: 1;
+}
+
+.draftSurveyResultContainer{
+  width: 100%;
+}

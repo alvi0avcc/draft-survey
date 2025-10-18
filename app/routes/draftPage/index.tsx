@@ -4,6 +4,10 @@ import DraftInput from '../../components/draftInput';
 import type { WritableDraft } from '@reduxjs/toolkit';
 import type { SurveyState } from '@/types';
 import { useAppSelector } from '@/store';
+import styles from './draftPage.module.css'
+import clsx from 'clsx';
+import Input from '@/components/ui/input';
+import InputNumber from '@/components/ui/input/Number';
 // import { useAppSelector } from '@/store';
 // import DensityInput from '../components/DensityInput';
 // import ResourcesInput from '../components/ResourcesInput';
@@ -16,17 +20,63 @@ const SurveyPage: React.FC = () => {
   // const { currentShip, isLoading, error } = useAppSelector((state) => state.survey);
   // const { performCalculation } = useCalculation();
 
-  return (
-    <main className="">
-      <h1 className="">Расчет драфт-сюрвея</h1>
-      
-      {/* <ShipDataLoader /> */}
+  const [number, setNumber] = React.useState<number>(0);
 
-      <section>
+  return (
+    <main>
+      <h1 className="">Расчет драфт-сюрвея</h1>
+
+      <section className={styles.draftSurveyContainer}>
+      
+      <section className={styles.draftMainDimensions}>
+        <h2>Главные размерения</h2>
+      </section>
+
+      <section className={clsx(styles.draftSurveyInitial, 'blockLineVert')}>
         <h2>Initial</h2>
+
+        <div className='blockLineHoriz'>
+          <InputNumber labelText='Fore PS'/>
+          <InputNumber labelText='Dist Btw'/>
+          <InputNumber labelText='Fore SB'/>
+        </div>
+
+        <div className='blockLineHoriz'>
+          <Input labelText='Mid PS'/>
+          <Input labelText='Dist Btw'/>
+          <Input labelText='Mid SB'/>
+        </div>
+
+        <div className='blockLineHoriz'>
+          <Input labelText='Aft PS'/>
+          <Input labelText='Dist Btw'/>
+          <Input labelText='Aft SB'/>
+        </div>
         
       </section>
+
+       <section className={styles.draftSurveyFinal}>
+        <h2>Final</h2>
+        <div className='blockLineHoriz'>
+          <Input labelText='Fore PS'/>
+          <Input labelText='Dist Btw'/>
+          <Input labelText='Fore SB'/>
+        </div>
+
+        <div className='blockLineHoriz'>
+          <Input labelText='Mid PS'/>
+          <Input labelText='Dist Btw'/>
+          <Input labelText='Mid SB'/>
+        </div>
+
+        <div className='blockLineHoriz'>
+          <Input labelText='Aft PS'/>
+          <Input labelText='Dist Btw'/>
+          <Input labelText='Aft SB'/>
+        </div>
+      </section>
       
+      <section className={styles.draftSurveyResultContainer}>
       {!currentShip && (
         <>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -64,6 +114,9 @@ const SurveyPage: React.FC = () => {
           {/* <ResultsDisplay /> */}
         </>
       )}
+      </section>
+
+      </section>
     </main>
   );
 };

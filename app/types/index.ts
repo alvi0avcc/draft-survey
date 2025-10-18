@@ -1,3 +1,10 @@
+export type StringForCalculatingTest = 'error' | 'number' | 'calculable' | 'calculable-error';
+export type StringForCalculatingResult = {
+  result: number | undefined,
+  string: string | undefined,
+  type: StringForCalculatingTest
+};
+
 export type SameForBothSides = 'different' | 'byPortSide' | 'byStarBoardSide';
 
 export interface DraftsMeasurementsPoint {

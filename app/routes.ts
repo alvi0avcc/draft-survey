@@ -1,9 +1,10 @@
 import { type RouteConfig, index, layout, route } from "@react-router/dev/routes";
-import { Routes } from "./const/enum";
+import { AppRoutes } from "./const/enum";
 
 export default [
   index("routes/homePage/index.tsx"),
-  route(Routes.DRAFT, "./routes/draftPage/index.tsx"),
+  route(AppRoutes.DRAFT, "./routes/draftPage/index.tsx"),
+  route(AppRoutes.NOT_FOUND, "./routes/notFoundPage/index.tsx"),
   // route("about", "./about.tsx"),
 
   // layout("./auth/layout.tsx", [

@@ -1,7 +1,6 @@
-import { Link } from 'react-router';
 import style from './welcomeNavMenu.module.css';
-import { Routes, Variant } from '@/const/enum';
-import ButtonLink from '@ui/ButtonLink';
+import { AppRoutes, Variant } from '@/const/enum';
+import ButtonLink from '@/components/ui/buttonLink';
 
 const WelcomeNavMenu = () => {
   return (
@@ -14,27 +13,27 @@ const WelcomeNavMenu = () => {
               <li>
                 <ButtonLink
                   variant={Variant.BUTTON}
-                  to={Routes.DRAFT}
+                  to={AppRoutes.DRAFT}
                   >Offline work</ButtonLink>
               </li>
               <li>
                 <ButtonLink
                   variant={Variant.BUTTON}
-                  to={Routes.SIGN_IN}
+                  to={AppRoutes.SIGN_IN}
                   disabled
                   >SignIn</ButtonLink>
               </li>
               <li>
                 <ButtonLink
                   variant={Variant.BUTTON}
-                  to={Routes.DRAFT_PREV}
+                  to={AppRoutes.DRAFT_PREV}
                   disabled
                   >Prev last work</ButtonLink>
               </li>
               <li>
                 <ButtonLink
                   variant={Variant.BUTTON}
-                  to={Routes.HISTORY}
+                  to={AppRoutes.HISTORY}
                   disabled
                   >Go to list Prev work</ButtonLink>
               </li>
