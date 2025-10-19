@@ -1,0 +1,40 @@
+.navigationBarContainer {
+  margin: 0 auto 0 auto;
+}
+
+.navigationBar{
+  display: flex;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.navList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navItem{
+  list-style: none;
+}
+
+.navLink{
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.navLink:hover:not(.active) {
+  text-shadow:
+    0 0 1px currentColor,
+    0 0 2px currentColor;
+}
+
+.navLink.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.navLink.active:hover{
+  cursor: default;
+}

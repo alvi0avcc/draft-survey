@@ -3,7 +3,10 @@ import { AppRoutes } from "./const/enum";
 
 export default [
   index("routes/homePage/index.tsx"),
-  route(AppRoutes.DRAFT, "./routes/draftPage/index.tsx"),
+  route(AppRoutes.SURVEY, "./routes/surveyPage/index.tsx", [
+    route(AppRoutes.GENERAL, "./routes/generalPage/index.tsx"),
+    route(AppRoutes.DRAFT, "./routes/draftPage/index.tsx"),
+  ]),
   route(AppRoutes.NOT_FOUND, "./routes/notFoundPage/index.tsx"),
   // route("about", "./about.tsx"),
 

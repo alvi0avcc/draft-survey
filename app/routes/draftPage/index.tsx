@@ -15,7 +15,7 @@ import InputNumber from '@/components/ui/input/Number';
 // import ShipDataLoader from '../components/ShipDataLoader';
 // import { useCalculation } from '../hooks/useCalculation';
 
-const SurveyPage: React.FC = () => {
+const SurveyPage = () => {
   const {currentShip, initialMeasurements, finalMeasurements,initialResources, finalResources, waterDensity, results, isLoading, error } = useAppSelector((state) => state.survey);
   // const { currentShip, isLoading, error } = useAppSelector((state) => state.survey);
   // const { performCalculation } = useCalculation();

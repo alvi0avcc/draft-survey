@@ -1,9 +1,11 @@
 export enum AppRoutes {
   HOME = '/',
-  DRAFT = '/draft',
+  SURVEY = '/survey',
+  GENERAL = AppRoutes.SURVEY + '/general',
+  DRAFT = AppRoutes.SURVEY + '/draft',
   DRAFT_PREV = '/draft:prev',
-  SIGN_IN = '/auth/login',
-  SIGN_UP = '/auth/signin',
+  SIGN_IN = '/auth/signin',
+  SIGN_UP = '/auth/signup',
   HISTORY = '/history',
   NOT_FOUND = '*',
 }
@@ -16,3 +18,16 @@ export enum Variant {
   LINK = 'link',
   BUTTON = 'button',
 }
+
+export const navMenuItems = [
+  { path: AppRoutes.HOME, label: 'Home' },
+  { path: '-', label: '-' },
+  { path: AppRoutes.SURVEY, label: 'Summary' },
+  { path: AppRoutes.GENERAL, label: 'General dimension' },
+  { path: AppRoutes.DRAFT, label: 'Draft' },
+  { path: '-', label: '-' },
+  { path: AppRoutes.HISTORY, label: 'Hystory' },
+  { path: '-', label: '-' },
+  { path: AppRoutes.SIGN_IN, label: 'Sign in' },
+  { path: AppRoutes.SIGN_UP, label: 'Sign up' },
+];

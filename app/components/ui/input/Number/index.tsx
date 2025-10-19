@@ -1,5 +1,5 @@
 import { useState, useCallback, type FC } from "react";
-import Input, { type Props as InputProps } from "../";
+import Input, { type Props as InputProps } from "..";
 import { Variant } from "@/const/enum";
 import styles from './InputNumber.module.css';
 import clsx from "clsx";
