@@ -13,7 +13,7 @@ const WelcomeNavMenu = () => {
               <li>
                 <ButtonLink
                   variant={Variant.BUTTON}
-                  to={AppRoutes.SURVEY}
+                  to={AppRoutes.SUMMARY}
                   >Offline work</ButtonLink>
               </li>
               <li>

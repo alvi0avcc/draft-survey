@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import DraftInput from '../../components/draftInput';
+import DraftInput from '../../../components/draftInput';
 import type { WritableDraft } from '@reduxjs/toolkit';
 import type { SurveyState } from '@/types';
 import { useAppSelector } from '@/store';
