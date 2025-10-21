@@ -24,97 +24,15 @@ const SurveyPage = () => {
 
   return (
     <main>
-      <h1 className="">Расчет драфт-сюрвея</h1>
+      <h1 className="">Calculation</h1>
 
       <section className={styles.draftSurveyContainer}>
-      
-      <section className={styles.draftMainDimensions}>
-        <h2>Главные размерения</h2>
-      </section>
 
-      <section className={clsx(styles.draftSurveyInitial, 'blockLineVert')}>
-        <h2>Initial</h2>
-
-        <div className='blockLineHoriz'>
-          <InputNumber labelText='Fore PS'/>
-          <InputNumber labelText='Dist Btw'/>
-          <InputNumber labelText='Fore SB'/>
-        </div>
-
-        <div className='blockLineHoriz'>
-          <Input labelText='Mid PS'/>
-          <Input labelText='Dist Btw'/>
-          <Input labelText='Mid SB'/>
-        </div>
-
-        <div className='blockLineHoriz'>
-          <Input labelText='Aft PS'/>
-          <Input labelText='Dist Btw'/>
-          <Input labelText='Aft SB'/>
-        </div>
-        
-      </section>
-
-       <section className={styles.draftSurveyFinal}>
-        <h2>Final</h2>
-        <div className='blockLineHoriz'>
-          <Input labelText='Fore PS'/>
-          <Input labelText='Dist Btw'/>
-          <Input labelText='Fore SB'/>
-        </div>
-
-        <div className='blockLineHoriz'>
-          <Input labelText='Mid PS'/>
-          <Input labelText='Dist Btw'/>
-          <Input labelText='Mid SB'/>
-        </div>
-
-        <div className='blockLineHoriz'>
-          <Input labelText='Aft PS'/>
-          <Input labelText='Dist Btw'/>
-          <Input labelText='Aft SB'/>
-        </div>
-      </section>
-      
-      <section className={styles.draftSurveyResultContainer}>
-      {!currentShip && (
-        <>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="space-y-6">
-              <h2 className="text-xl font-semibold">Начальное состояние</h2>
-              {/* <DraftInput type="initial" /> */}
-              {/* <ResourcesInput type="initial" /> */}
-            </div>
-            
-            <div className="space-y-6">
-              <h2 className="text-xl font-semibold">Конечное состояние</h2>
-              {/* <DraftInput type="final" /> */}
-              {/* <ResourcesInput type="final" /> */}
-            </div>
-          </div>
-          
-          {/* <DensityInput /> */}
-          
-          <div className="flex justify-center">
-            {/* <button
-              onClick={performCalculation}
-              disabled={isLoading}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50"
-            >
-              {isLoading ? 'Расчет...' : 'Рассчитать'}
-            </button> */}
-          </div>
-          
-          {error && (
-            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-              {error}
-            </div>
-          )}
-          
-          {/* <ResultsDisplay /> */}
-        </>
-      )}
-      </section>
+        <section className={clsx(styles.draftSurveyInitial, 'blockLineVert')}>
+          <DraftInput state='Initial'/>
+          <DraftInput state='Intermeddle'/>
+          <DraftInput state='Final'/>
+        </section>
 
       </section>
     </main>

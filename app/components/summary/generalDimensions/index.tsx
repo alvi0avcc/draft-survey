@@ -1,21 +1,19 @@
 import styles from './generalDimensions.module.css';
 import Input from "@ui/input";
 
-const generalDimensions = () =>{
+const GeneralDimensions = () =>{
   return (
-      <section className={styles.titleContainer}>
-        <div className={styles.titleLine}>
-          <Input labelText="Ref."/>
-          <Input labelText="Place/Port"/>
-          <Input labelText="Terminal/Pier"/>
+      <section className={styles.generalDimensionsContainer}>
+        <div className={styles.generalDimensionsLine}>
+          <Input labelText="L.B.P."/>
+          <Input labelText="Breadth"/>
         </div>
-        <div className={styles.titleLine}>
-          <Input labelText="Vessel"/>
-          <Input labelText="Cargo"/>
-          <Input labelText="Loading/Discharging"/>
+        <div className={styles.generalDimensionsLine}>
+          <Input labelText="Light Ship"/>
+          <Input labelText="Constant"/>
         </div>
       </section>
   )
 }
 
-export default generalDimensions;
+export default GeneralDimensions;

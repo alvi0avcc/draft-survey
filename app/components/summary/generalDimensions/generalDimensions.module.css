@@ -1,10 +1,10 @@
-.titleContainer{
+.generalDimensionsContainer{
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.titleLine{
+.generalDimensionsLine{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
