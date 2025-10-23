@@ -1,15 +1,14 @@
-import NavBar from "@/components/navBar";
-import { Outlet } from "react-router";
- 
-const SurveyPage = () =>{
+import { Outlet } from 'react-router';
+import NavBar from '@/components/navBar';
 
+const SurveyPage = () => {
   return (
     <>
-      <NavBar/>
-      
-      <Outlet/>
+      <NavBar />
+
+      <Outlet />
     </>
-  )
-}
+  );
+};
 
 export default SurveyPage;

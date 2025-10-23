@@ -1,6 +1,6 @@
 import type { FC, PropsWithChildren } from 'react';
-import { clsx } from 'clsx';
 import { wrapperId } from '@const/uiConst';
+import { clsx } from 'clsx';
 import styles from './wrapper.module.css';
 
 interface WrapperProps extends PropsWithChildren {

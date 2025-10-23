@@ -1,8 +1,12 @@
-export type StringForCalculatingTest = 'error' | 'number' | 'calculable' | 'calculable-error';
+export type StringForCalculatingTest =
+  | 'error'
+  | 'number'
+  | 'calculable'
+  | 'calculable-error';
 export type StringForCalculatingResult = {
-  result: number | undefined,
-  string: string | undefined,
-  type: StringForCalculatingTest
+  result: number | undefined;
+  string: string | undefined;
+  type: StringForCalculatingTest;
 };
 
 export type SameForBothSides = 'different' | 'byPortSide' | 'byStarBoardSide';
@@ -49,7 +53,7 @@ export interface ShipData {
 }
 
 export interface SurveyState {
-  currentShip: ShipData | null
+  currentShip: ShipData | null;
   initialMeasurements: DraftMeasurements;
   finalMeasurements: DraftMeasurements;
   initialResources: ShipResources;

@@ -1,9 +1,5 @@
 const Header = () => {
-  return (
-    <>
-      Header
-    </>
-  )
-}
+  return <>Header</>;
+};
 
 export default Header;

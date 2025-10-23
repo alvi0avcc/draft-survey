@@ -1,11 +1,11 @@
-.buttonLink{
+.buttonLink {
   text-align: center;
 
-  &.disabled{
+  &.disabled {
     cursor: default;
   }
 
-  &.link{
+  &.link {
     text-decoration: none;
 
     &:not(.disabled):hover {
@@ -13,21 +13,20 @@
     }
   }
 
-
-  &.button{
+  &.button {
     display: block;
-    border: 1px solid black;
+    border: 1px solid #000;
     border-radius: 5px;
     padding: 5px;
     margin: 10px;
     text-decoration: none;
 
-    &.disabled{
-      background-color: grey;
+    &.disabled {
+      background-color: #808080;
     }
 
     &:not(.disabled):hover {
-      background-color: lightblue;
+      background-color: #add8e6;
     }
   }
 }

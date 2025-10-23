@@ -1,33 +1,33 @@
 .navigationBarContainer {
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
 }
 
-.navigationBar{
+.navigationBar {
   display: flex;
   padding-bottom: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000;
 }
 
-.navList{
+.navList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
 
-.navItem{
+.navItem {
   list-style: none;
 }
 
-.navLink{
+.navLink {
   font-weight: normal;
   text-decoration: none;
 }
 
 .navLink:hover:not(.active) {
   text-shadow:
-    0 0 1px currentColor,
-    0 0 2px currentColor;
+    0 0 1px currentcolor,
+    0 0 2px currentcolor;
 }
 
 .navLink.active {
@@ -35,6 +35,6 @@
   text-decoration: underline;
 }
 
-.navLink.active:hover{
+.navLink.active:hover {
   cursor: default;
 }

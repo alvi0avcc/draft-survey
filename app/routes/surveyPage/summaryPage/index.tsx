@@ -1,17 +1,16 @@
-import GeneralDimensions from "@components/summary/generalDimensions";
-import Title from "@components/summary/title";
+import GeneralDimensions from '@components/summary/generalDimensions';
+import Title from '@components/summary/title';
 
-const SummaryPage = () =>{
+const SummaryPage = () => {
   return (
     <>
       <h1>Summary information</h1>
 
-      <Title/>
+      <Title />
 
-      <GeneralDimensions/>
-
+      <GeneralDimensions />
     </>
-  )
-}
+  );
+};
 
 export default SummaryPage;

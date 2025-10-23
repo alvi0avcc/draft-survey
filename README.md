@@ -2,7 +2,7 @@
 
 A modern, production-ready template for building full-stack React applications using React Router.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](;https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
 ## Features
 
@@ -12,7 +12,7 @@ A modern, production-ready template for building full-stack React applications u
 - 🔄 Data loading and mutations
 - 🔒 TypeScript by default
 - 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- 📖 [React Router docs](;https://reactrouter.com/)
 
 ## Getting Started
 
@@ -80,8 +80,8 @@ Make sure to deploy the output of `npm run build`
 
 ## Styling
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+This template comes with [Tailwind CSS](;https://tailwindcss.com/) already configured for a simple default starting experience. you can use whatever css framework you prefer.
 
 ---
 
-Built with ❤️ using React Router.
+built with ❤️ using react router.

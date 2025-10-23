@@ -1,6 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
+import {
+  type TypedUseSelectorHook,
+  useDispatch,
+  useSelector,
+} from 'react-redux';
 import surveyReducer from './slices/surveySlice';
-import { useDispatch, useSelector, type TypedUseSelectorHook } from 'react-redux';
+
 // import shipsReducer from './slices/shipsSlice';
 // import appReducer from './slices/appSlice';
 

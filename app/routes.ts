@@ -1,14 +1,14 @@
-import { type RouteConfig, index, layout, route } from "@react-router/dev/routes";
-import { AppRoutes } from "./const/enum";
+import { type RouteConfig, index, route } from '@react-router/dev/routes';
+import { AppRoutes } from './const/enum';
 
 export default [
-  index("routes/homePage/index.tsx"),
-  route(AppRoutes.SURVEY, "./routes/surveyPage/index.tsx", [
-    route(AppRoutes.SUMMARY, "./routes/surveyPage/summaryPage/index.tsx"),
-    route(AppRoutes.GENERAL, "./routes/surveyPage/generalPage/index.tsx"),
-    route(AppRoutes.DRAFT, "./routes/surveyPage/draftPage/index.tsx"),
+  index('routes/homePage/index.tsx'),
+  route(AppRoutes.SURVEY, './routes/surveyPage/index.tsx', [
+    route(AppRoutes.SUMMARY, './routes/surveyPage/summaryPage/index.tsx'),
+    route(AppRoutes.GENERAL, './routes/surveyPage/generalPage/index.tsx'),
+    route(AppRoutes.DRAFT, './routes/surveyPage/draftPage/index.tsx'),
   ]),
-  route(AppRoutes.NOT_FOUND, "./routes/notFoundPage/index.tsx"),
+  route(AppRoutes.NOT_FOUND, './routes/notFoundPage/index.tsx'),
   // route("about", "./about.tsx"),
 
   // layout("./auth/layout.tsx", [

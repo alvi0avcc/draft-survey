@@ -1,8 +1,8 @@
-import { Variant } from "@/const/enum";
-import clsx from "clsx";
-import type { FC, LinkHTMLAttributes, ReactNode } from "react";
-import { Link } from "react-router";
-import styles from './navLink.module.css'
+import { Variant } from '@/const/enum';
+import type { FC, LinkHTMLAttributes, ReactNode } from 'react';
+import clsx from 'clsx';
+import { Link } from 'react-router';
+import styles from './navLink.module.css';
 
 interface Props extends LinkHTMLAttributes<HTMLAnchorElement> {
   to: string;
@@ -23,8 +23,8 @@ const NavLink: FC<Props> = ({
     return (
       <span
         className={clsx(
-          styles.buttonLink, 
-          styles[variant], 
+          styles.buttonLink,
+          styles[variant],
           styles.disabled,
           className
         )}

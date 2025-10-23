@@ -1,6 +1,12 @@
-import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import type { SurveyState, DraftMeasurements, ShipResources, ShipData, CalculationResults } from '@/types';
 import { initialState } from '@/const';
+import type {
+  CalculationResults,
+  DraftMeasurements,
+  ShipData,
+  ShipResources,
+  SurveyState,
+} from '@/types';
+import { type PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 const surveySlice = createSlice({
   name: 'survey',
@@ -9,7 +15,10 @@ const surveySlice = createSlice({
     setCurrentShip: (state, action: PayloadAction<ShipData>) => {
       state.currentShip = action.payload;
     },
-    setInitialMeasurements: (state, action: PayloadAction<DraftMeasurements>) => {
+    setInitialMeasurements: (
+      state,
+      action: PayloadAction<DraftMeasurements>
+    ) => {
       state.initialMeasurements = action.payload;
     },
     setFinalMeasurements: (state, action: PayloadAction<DraftMeasurements>) => {
@@ -24,7 +33,7 @@ const surveySlice = createSlice({
     setFinalResources: (state, action: PayloadAction<ShipResources>) => {
       state.finalResources = action.payload;
     },
-    calculateResults: (state) => {
+    calculateResults: state => {
       state.isLoading = true;
       state.error = null;
     },
@@ -36,7 +45,7 @@ const surveySlice = createSlice({
       state.error = action.payload;
       state.isLoading = false;
     },
-    resetSurvey: (state) => {
+    resetSurvey: state => {
       return initialState;
     },
   },

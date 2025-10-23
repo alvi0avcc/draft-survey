@@ -1,21 +1,21 @@
-.draftSurveyContainer{
-  border: 1px solid black;
+.draftSurveyContainer {
+  border: 1px solid #000;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.draftMainDimensions{
-  border: 1px solid blue;
+.draftMainDimensions {
+  border: 1px solid #00f;
   width: 100%;
 }
 
 .draftSurveyInitial,
 .draftSurveyFinal {
-  border: 1px solid blue;
+  border: 1px solid #00f;
   flex: 1;
 }
 
-.draftSurveyResultContainer{
+.draftSurveyResultContainer {
   width: 100%;
 }

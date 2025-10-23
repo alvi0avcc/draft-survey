@@ -1,7 +1,7 @@
-import { Variant } from "@/const/enum";
-import clsx from "clsx";
-import type { FC, LabelHTMLAttributes, ReactNode } from "react";
-import styles from './label.module.css'
+import { Variant } from '@/const/enum';
+import type { FC, LabelHTMLAttributes, ReactNode } from 'react';
+import clsx from 'clsx';
+import styles from './label.module.css';
 
 interface Props extends LabelHTMLAttributes<HTMLLabelElement> {
   variant?: Variant;
@@ -14,14 +14,10 @@ const InputTest: FC<Props> = ({
   children,
   ...rest
 }: Props) => {
-
   return (
-      <label
-        className={clsx(styles.label, styles[variant], className)}
-        {...rest}
-      >
-        {children}
-      </label>
+    <label className={clsx(styles.label, styles[variant], className)} {...rest}>
+      {children}
+    </label>
   );
 };
 

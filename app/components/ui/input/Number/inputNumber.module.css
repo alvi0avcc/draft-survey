@@ -1,8 +1,7 @@
 .inputNumberContainer {
   position: relative;
   display: inline-flex;
-  align-items: stretch;
-  width: 100%;
+  align-items: center;
 }
 
 /* .inputNumber {
