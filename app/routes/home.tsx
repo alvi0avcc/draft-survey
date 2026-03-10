@@ -1,4 +1,5 @@
-import { Welcome } from '../welcome/welcome';
+import { HStack } from '@chakra-ui/react';
+import { ColorModeButton } from '~/components/ui/color-mode';
 
 import type { Route } from './+types/home';
 
@@ -10,5 +11,10 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <>
+      <HStack>Hi !</HStack>
+      <ColorModeButton />
+    </>
+  );
 }
