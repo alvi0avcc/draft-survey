@@ -1,0 +1,11 @@
+node_modules
+build
+dist
+public
+.cache
+coverage
+.git
+.react-router
+*.config.js
+*.config.ts
+.env
