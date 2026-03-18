@@ -3,7 +3,7 @@ import * as yup from 'yup';
 import { WATER_EXPANSION_COEFFICIENT } from '~/const/water.const';
 import { waterDensitySchema } from '~/validation/water-density.schema';
 
-import type { ResponseWaterDensityReadings, WaterDensityReadings } from '../types/draft';
+import type { ResponseWaterDensityReadings, WaterDensityReadings } from '../types/waterDensity';
 
 export const recalculateWaterDensity = (
   data: WaterDensityReadings

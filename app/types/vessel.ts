@@ -1,35 +1,18 @@
-export interface VesselParticulars {
+export interface Vessel {
+  name?: string;
+  imo?: string;
   LBP?: number;
+  length?: number;
   breadth?: number;
   depth?: number;
+  lightShip?: number;
+  deadweight?: number;
+  constantUsually?: number;
+  flag?: string;
+  type?: string;
+  owner?: string;
+  operator?: string;
 }
-
-export interface DraftReadings {
-  Port?: number;
-  Starboard?: number;
-  markOffset?: number;
-}
-
-export interface DraftMarks {
-  forward?: DraftReadings;
-  midship?: DraftReadings;
-  aft?: DraftReadings;
-}
-
-export interface WaterDensityReadings {
-  measuredDensity?: number;
-  measuredTemperature?: number;
-  calibratedTemperature?: number;
-}
-
-export interface ResponseWaterDensityReadings {
-  measuredDensity?: number;
-  measuredTemperature?: number;
-  calibratedTemperature?: number;
-  message: string[];
-}
-
-export type WaterDensityMeasurements = WaterDensityReadings[];
 
 // interface HydrostaticData {
 //   displacement: number; // Водоизмещение (т)

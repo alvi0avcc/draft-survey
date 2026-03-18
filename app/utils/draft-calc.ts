@@ -1,10 +1,11 @@
+import type { VesselParticulars } from '~/types/vessel';
 import type {
-  DraftMarks,
   ResponseWaterDensityReadings,
-  VesselParticulars,
   WaterDensityMeasurements,
   WaterDensityReadings,
-} from '../types/draft';
+} from '~/types/waterDensity';
+
+import type { DraftMarks } from '../types/draftMarks';
 
 import {
   calculateAverageWaterDensity,
