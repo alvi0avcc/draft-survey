@@ -5,8 +5,8 @@ import type { Vessel } from './vessel';
 import type { WaterDensityReadings } from './waterDensity';
 
 export interface DraftSurvey {
-  order?: Order[];
-  survey?: Survey[];
+  order: Order[];
+  survey: Survey[];
 }
 
 export interface Order {
@@ -21,7 +21,7 @@ export interface Order {
 export interface Survey {
   dateTimeInit?: Date;
   dateTimeComplete?: Date;
-  draftMarks?: DraftMarks;
+  draftMarks: DraftMarks;
   waterDensityReadings?: WaterDensityReadings;
   seaCondition?: { condition?: 'calm' | 'swell'; swell?: number };
 }

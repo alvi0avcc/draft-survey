@@ -1,31 +1,50 @@
-import type { VesselParticulars } from '~/types/vessel';
-import type {
-  ResponseWaterDensityReadings,
-  WaterDensityMeasurements,
-  WaterDensityReadings,
-} from '~/types/waterDensity';
+import * as Init from '~/const/init.const';
+import type { DraftSurvey } from '~/types/draftSurvey';
+import type { ResponseWaterDensityReadings, WaterDensityReadings } from '~/types/waterDensity';
 
-import type { DraftMarks } from '../types/draftMarks';
+import type { DraftMarks, DraftMarksPoint } from '../types/draftMarks';
 
-import {
-  calculateAverageWaterDensity,
-  memoizedRecalculateWaterDensity,
-} from './water-density.utils';
+import { memoizedRecalculateWaterDensity } from './water-density.utils';
 
 export class DraftSurveyCalculator {
-  private vesselParticulars: VesselParticulars;
-  private draftMarks: DraftMarks;
-  private waterDensityMeasurements: WaterDensityMeasurements;
+  private draftIndex: number;
+  private draftSurvey: DraftSurvey;
 
   constructor() {
-    this.vesselParticulars = { breadth: undefined, depth: undefined, LBP: undefined };
-    this.draftMarks = { forward: undefined, midship: undefined, aft: undefined };
-    this.waterDensityMeasurements = [];
+    this.draftIndex = 0;
+    this.draftSurvey = Init.draftSurvey;
   }
 
-  public get getWaterDensityMeasurements() {
-    return this.waterDensityMeasurements;
+  public set setDraftSurvey(data: DraftSurvey) {
+    this.draftSurvey = structuredClone(data);
   }
+
+  public get getDraftSurvey() {
+    return structuredClone(this.draftSurvey);
+  }
+
+  public setDraftMarks(data: DraftMarks, draftIndex?: number) {
+    this.draftSurvey.survey[draftIndex || this.draftIndex].draftMarks = structuredClone(data);
+  }
+
+  public getDraftMarks(draftIndex?: number) {
+    return structuredClone(this.draftSurvey.survey[draftIndex || this.draftIndex].draftMarks);
+  }
+
+  public setDraftMarkByPosition(
+    draft: number,
+    markOffset: number,
+    position: keyof DraftMarks,
+    side: Exclude<keyof DraftMarksPoint, 'portMarkOffset' | 'starboardMarkOffset'>
+  ) {
+    this.draftSurvey.survey[this.draftIndex].draftMarks[position][side] = draft;
+    const offset = side === 'port' ? 'portMarkOffset' : 'starboardMarkOffset';
+    this.draftSurvey.survey[this.draftIndex].draftMarks[position][offset] = markOffset;
+  }
+
+  // public get getWaterDensityMeasurements() {
+  //   return this.waterDensityMeasurements;
+  // }
 
   public recalculateWaterDensity(
     data: WaterDensityReadings
@@ -33,9 +52,9 @@ export class DraftSurveyCalculator {
     return memoizedRecalculateWaterDensity(data);
   }
 
-  public get getWaterDensity() {
-    return calculateAverageWaterDensity(this.waterDensityMeasurements);
-  }
+  // public get getWaterDensity() {
+  //   return calculateAverageWaterDensity(this.waterDensityMeasurements);
+  // }
 }
 
 //   /**

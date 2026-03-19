@@ -14,6 +14,10 @@ export interface Vessel {
   operator?: string;
 }
 
+export type PositionBylength = 'forward' | 'midship' | 'aft';
+
+export type PositionByBreadth = 'port' | 'starboard';
+
 // interface HydrostaticData {
 //   displacement: number; // Водоизмещение (т)
 //   tpc: number; // Tons per centimeter immersion (т/см)
